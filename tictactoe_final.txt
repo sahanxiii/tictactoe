@@ -1,0 +1,34 @@
+This is a simple tictactoe game that a user can play on the console. Two players play
+against each other and whoever can outsmart the other and make 3 X's or O's in a row,
+column or diagonal manner, wins.
+The board will be displayed on the console and will look as follows:
+
+  |   |   
+---------
+  |   |   
+---------
+  |   |   
+---------
+
+Each 'tile' is numbered starting from 1 to 9, and is stored in a list.
+
+First, the user has the choice to select his opponent - either a computer or another 
+player.
+We'll start with another player as the opponent.
+Two players will be asked alternatively to select their choices. The program has stored
+the winning combinations in a tuple as follows:
+winners = ((0, 1, 2), (3, 4, 5), (6, 7, 8), (0, 3, 6), (1, 4, 7), (2, 5, 8), (0, 4, 8), (2, 4, 6))
+
+If a player can achieve a winning combination, they win.
+
+Next, we design the bot as an opponent.
+The bot follows the following algorithm:
+Step 1. Check if there is a winning move. If yes, make that move. If no, move on to Step 2.
+Step 2. Check if the user has a winning move. If yes, block that move. If no, move on to Step 3.
+Step 3. Check if the center tile is free. If yes, make that move. If no, move on to Step 4.
+Step 4. Check if the corner tiles are free. If yes, make that move. If no, move on to Step 5.
+Step 5. Make a move on the side tiles (2,4,6,8). This step is not reached, which is why it is not programmed.
+
+
+
+
